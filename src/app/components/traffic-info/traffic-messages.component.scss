@@ -8,15 +8,12 @@
     max-width: 300px;
     font-weight: bolder;
     font-size: 2em;
-    color:rgb(120, 98, 206);
+    color:rgb(31, 18, 82);
 }
 
 .controls-container {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: base.$ctlwidth-wide;
-    padding-bottom: 0px;
+
 }
 
 @media only screen and (min-width: 800px) {
@@ -27,10 +24,10 @@
 
 
 .sr-button-wide{
-    background-color: rgb(89, 59, 210);
+    background-color: rgb(42, 23, 122);
 border-color: transparent;}
 .sr-button-wide:hover{
-    background-color: rgb(134, 117, 204);
+    background-color: rgb(73, 111, 236);
 border-color: transparent;}
 .showmap-ctn {
     margin-top: base.$margintop;
@@ -43,11 +40,7 @@ border-color: transparent;}
     margin-bottom: base.$margintop;
 }
 
-.p-accordion 
-{
-    background-color: red;
 
-}
 :host::ng-deep {
     .sortfilt-ctn {
         border-radius: 35px;

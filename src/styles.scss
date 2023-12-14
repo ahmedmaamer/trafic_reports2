@@ -12,11 +12,12 @@
     body {
         max-width: 75%;
         margin: 0 auto !important;
-        background-image: url('assets/trafic1.jpg');
+        background: linear-gradient(90deg, rgba(84,199,226,1) 0%, rgba(121,214,240,1) 35%, rgba(0,255,173,1) 100%);
+
     }
 }
 .sr-sidebar.p-sidebar{
-    background-image: url('assets/trafic1.jpg');
+    background: linear-gradient(90deg, rgba(84,199,226,1) 0%, rgba(121,214,240,1) 35%, rgba(0,255,173,1) 100%);
 }
 .clickable {
     cursor: pointer;
@@ -33,7 +34,7 @@
 }
 
 .close-button {
-    color: rgb(134, 117, 204);
+    color: rgb(29, 19, 71);
     font-size: 2.5em;
     font-weight: bold;
     vertical-align: middle;
@@ -70,7 +71,7 @@
 }
 
 .details-header-text {
-    color: rgb(134, 117, 204);
+    color: rgb(36, 23, 91);
     margin: 20px;
     font-weight: bold;
     overflow: hidden;
@@ -85,12 +86,28 @@
 .p-button-icon {
     font-size: 1.5rem;
 }
+.p-button{
+    background-color: rgb(42, 23, 122);
+    border-color: transparent;  
+}
 .sr-button.p-button {
+   
     width: 100%;
     border-radius: 10px;
     max-width: 100%;
     margin-left: base.$marginlr;
     margin-right: base.$marginlr;
+}
+
+.sr-button-wide{
+    background-color: rgb(42, 23, 122);
+border-color: transparent;}
+.sr-button-wide:hover{
+    background-color: rgb(73, 111, 236);
+}
+.p-button {
+    background-color: rgb(42, 23, 122);
+border-color: transparent;
 }
 .sr-button-wide.p-button {
     width: 100%;

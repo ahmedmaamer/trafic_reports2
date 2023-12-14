@@ -1,16 +1,4 @@
-<div
-    class="msg-ctn"
-    [ngClass]="{
-        hovered: isHovered,
-        'msg-ctn-red': message.priority === 1,
-        'msg-ctn-redo': message.priority === 2,
-        'msg-ctn-orange': message.priority === 3,
-        'msg-ctn-blue': message.priority > 3
-    }"
-    (mouseenter)="onMouseEnter()"
-    (mouseleave)="onMouseLeave()"
-    *ngIf="message"
->
+<div class="msg-ctn-red" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" *ngIf="message">
     <!-- ... rest of your code ... -->
 
     <div class="{{ getStyleClassForPriority(message.priority) }}">
