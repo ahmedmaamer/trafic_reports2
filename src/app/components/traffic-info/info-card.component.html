@@ -1,0 +1,48 @@
+<div
+    class="msg-ctn"
+    [ngClass]="{
+        hovered: isHovered,
+        'msg-ctn-red': message.priority === 1,
+        'msg-ctn-redo': message.priority === 2,
+        'msg-ctn-orange': message.priority === 3,
+        'msg-ctn-blue': message.priority > 3
+    }"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+    *ngIf="message"
+>
+    <!-- ... rest of your code ... -->
+
+    <div class="{{ getStyleClassForPriority(message.priority) }}">
+        {{ message.priorityName }}
+    </div>
+    <div class="category">
+        {{ message.categoryName }}
+    </div>
+
+    <div class="p-grid">
+        <div class="p-col">
+            <div>
+                <b>{{ message.title }} ({{ message.subCategory }})</b>
+            </div>
+            <div *ngIf="message.distance">
+                Distance: <span class="dist-info">{{ message.distance }} km</span>
+            </div>
+            <div>
+                Published: <span class="date-info">{{ message.createdDate | date : 'd MMM HH:mm' }}</span>
+            </div>
+        </div>
+        <div class="p-col-4" *ngIf="showMapLink">
+            <div class="open-button" (click)="onClickMessage(message)">
+                <span>Map</span>
+                <i class="pi pi-globe map-icon"></i>
+            </div>
+        </div>
+    </div>
+    <div>
+        {{ message.exactLocation }}
+    </div>
+    <div>
+        {{ message.description }}
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<p-sidebar *ngIf="isVisible" [(visible)]="isVisible" position="right" styleClass="sr-sidebar" [showCloseIcon]="false">
+    <div class="p-sidebar-headerxx">
+        <div class="details-header-text">
+            <i (click)="close()" class="pi pi-chevron-left close-button clickable"></i>
+            {{ title }}
+        </div>
+        <div>
+            <div>
+                {{ details }}
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="mappp">
+        <app-map (onMarkerClicked)="onMapMarkerClicked($event)"></app-map>
+    </div>
+</p-sidebar>
+<app-info-sidebar></app-info-sidebar>
